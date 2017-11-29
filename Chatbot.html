@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Siri</title>
+</head>
+<body>
+<script>
+    console.log("Siri is sleeping")
+    setTimeout(askForName, 2000)
+    function askForName() {
+        const DAY = 365
+        const HOUR = 24
+        const MINUTE = 60
+        console.log("Siri wakes up")
+        var name = prompt("Who are you?")
+        console.log("got name: "+name)
+        var age = prompt("Hello "+name+"! I\'m Siri and I\'m 5 years old.\nHow old are you?")
+        console.log("got age: "+age)
+        alert("Holy! It means you are "+age*DAY*HOUR*MINUTE+" minutes old")
+    }
+</script>
+</body>
+</html>
