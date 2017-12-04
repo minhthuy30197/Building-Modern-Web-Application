@@ -6,20 +6,22 @@
 </head>
 <body>
 <script>
-    let name = askForPuppyName()
-    let age = askForPuppyAge()
-    let realAge = calcRealAge(age)
-    document.write(name +" is "+ realAge + " years old!")
+  let name = askForPuppyName();
+  let age = askForPuppyAge();
+  let realAge = calcRealAge(age);
+  document.write(name + ' is ' + realAge + ' years old!');
 
-    function askForPuppyName() {
-      return prompt('What\'s your puppy name?')
-    }
-    function askForPuppyAge() {
-      return prompt('How old is your puppy?')
-    }
-    function calcRealAge(age) {
-      return 7*age
-    }
+  function askForPuppyName() {
+    return prompt('What\'s your puppy name?');
+  }
+
+  function askForPuppyAge() {
+    return prompt('How old is your puppy?');
+  }
+
+  function calcRealAge(age) {
+    return 7 * age;
+  }
 </script>
 </body>
 </html>
