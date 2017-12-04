@@ -6,9 +6,19 @@
 </head>
 <body>
 <script>
-  let age = prompt('How old are you?');
-  let result = (age >= 1) ? age + ' là tuổi hợp lệ' : age + ' là tuổi không hợp lệ';
-  alert(result);
+    let age = ""
+    let chaomung = function() {
+      document.write("Tuổi hợp lệ")
+    }
+    let thongbaoloi = function() {
+      document.write("Tuổi không hợp lệ")
+    }
+    let task = validateAge(age) ? chaomung : thongbaoloi
+    task()
+
+    function validateAge(age) {
+      return age * 1 == age && age > 0 ?true:false
+    }
 </script>
 </body>
 </html>
