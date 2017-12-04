@@ -6,9 +6,19 @@
 </head>
 <body>
 <script>
+    let thongbaosai = function() {
+      alert(year + " không là năm nhuận")
+    }
+    let thongbaodung = function() {
+      alert(year + " là năm nhuận")
+    }
     let year = prompt("Nhập năm: ")
-    let result = (year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0)) ? year + " là năm nhuận." : year + " không là năm nhuận"
-    alert(result);
+    let task = checkYear(year) ? thongbaodung : thongbaosai
+    task()
+
+    function checkYear(year) {
+      return (year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0)) ? true : false
+    }
 </script>
 </body>
 </html>
