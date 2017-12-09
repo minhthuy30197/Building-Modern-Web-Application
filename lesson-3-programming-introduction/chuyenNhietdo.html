@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+</html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+<script>
+    document.write(assertEquals(194, 194, "chuyen 90 do C sang do F")+"<br>")
+    document.write(assertEquals(32, toFahrenheit(0), "chuyen 0 do C sang do F")+"<br>")
+    document.write(assertEquals(37.78, toCelsius(100), "chuyen 100 do F sang do C")+"<br>")
+    document.write(assertEquals(-17.78, toCelsius(0), "chuyen 0 do F sang do C"))
+
+    function  toCelsius(num) {
+      return Math.round(((num - 32)/1.8) * 100) / 100;
+    }
+    
+    function toFahrenheit(num) {
+      return num*1.8 + 32.0
+    }
+
+    function assertEquals(num1,num2,message) {
+      return ((num1 && num2) == num1) && (num1 === num2) ? "PASS: "+message : "FAILED: "+message
+    }
+</script>
+</body>
